@@ -28,9 +28,9 @@ function signAmazonUrl($url, $secret_key)
     // Parse the URL into $urlparts
     $urlparts       = parse_url($url);
     // Build $params with each name/value pair
-    foreach (split('&', $urlparts['query']) as $part) {
+    foreach (explode('&', $urlparts['query']) as $part) {
         if (strpos($part, '=')) {
-            list($name, $value) = split('=', $part, 2);
+            list($name, $value) = explode('=', $part, 2);
         } else {
             $name = $part;
             $value = '';
