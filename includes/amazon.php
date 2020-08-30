@@ -1,8 +1,8 @@
 <?php
 
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
+//ini_set('display_errors', '1');
+//ini_set('display_startup_errors', '1');
+//error_reporting(E_ALL);
 
 header("Content-Type: text/plain", true);
 
@@ -10,8 +10,8 @@ $book=array("isbn_13"=>'', "id_worldcat"=>'', "id_google"=>'','ASIN'=>'', 'cover
 $q = urlencode(htmlentities($_GET['q']));
 
 
-$private_key = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
-$params["AWSAccessKeyId"] = "xxxxxxxxxxxxxxxxxxxx";
+$private_key = "miD6LaCjjzb0Rp6x4wigHq2zpKf8vFQLLcAPFh/e";//"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+$params["AWSAccessKeyId"] = "AKIAZVHKFAGGENSDWLVX";//"xxxxxxxxxxxxxxxxxxxx";
 $params["AssociateTag"] = "xxxxxxxxxxxxxxxxxxxx-20";
 
 
