@@ -1,4 +1,9 @@
-<?php 
+<?php
+
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
+
 header("Content-Type: text/plain", true);
 
 $book=array("isbn_13"=>'', "id_worldcat"=>'', "id_google"=>'','ASIN'=>'', 'cover'=>'', 'title'=>'', 'authors'=>'', "description"=>'', "publisher"=>'', 'date'=>'', "numberOfPages"=>0,'nb_book'=>0,'url'=>'');
