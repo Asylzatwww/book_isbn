@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 
 import sys, codecs, cgi
 
-sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
+#sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
 
 # Create instance of FieldStorage
 form = cgi.FieldStorage()
