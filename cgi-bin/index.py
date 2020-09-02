@@ -39,18 +39,15 @@ with requests.Session() as c:
 
     #print(soup)
 
-    href= soup.find("h2").find("a", {"class" : "a-link-normal"})#.get('href')
+    href= soup.find("h2").find("a", {"class" : "a-link-normal"}).get('href')
 
     print(href)
-    print(href.get('href'))
 
-    print(soup.title.string)
-
-    print("ss")
-    url = 'http://www.k-agent.ru' + href
+    url = 'https://www.amazon.co.uk' + href
     print(url)
-    page = c.get(url)
+    page = c.get(url, headers=headers)
     soup = BeautifulSoup(page.content, 'html.parser')
+    print(soup)
     #print(soup.title.string)
     #href = soup.find("table", attrs={"class": "compdate"}).find_all("td")
     json = '{'
