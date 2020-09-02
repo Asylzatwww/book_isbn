@@ -36,7 +36,7 @@ with requests.Session() as c:
         'User-Agent': 'Mozilla/5.0 (Windows NT 6.0; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0'
     }
 
-    page = c.get(url)
+    page = c.get(url, headers=headers) #proxies=proxyDict)
 
     soup = BeautifulSoup(page.content.replace("<!--[if IE 6]>", "").replace("<![endif]-->", ""), 'html.parser')
 
@@ -48,7 +48,7 @@ with requests.Session() as c:
 
     url = 'https://www.amazon.co.uk' + href
     #print(url)
-    page = c.get(url)
+    page = c.get(url, headers=headers)#proxies=proxyDict)
     soup = BeautifulSoup(page.content.replace("<!--[if IE 6]>", "").replace("<![endif]-->", ""), 'html.parser')
 
     title = soup.find("span", {"id" : "productTitle"}).get_text()
