@@ -37,11 +37,13 @@ with requests.Session() as c:
 
     soup = BeautifulSoup(page.content, 'html.parser')
 
-    print(soup)
+    #print(soup)
 
-    href= soup.find('body')#.get('href')
+    href= soup.find_all('h2')#.get('href')
 
-    print(href)
+    print(href[0])
+    print(href[1])
+    print(href[2])
 
     dd = soup.find("div", {"class" : "srchbarfrm_v2 "})
     print(dd)
