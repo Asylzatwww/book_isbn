@@ -21,7 +21,7 @@
 
                 $.ajax({url: "http://asylzat.com/cgi-bin/index.py?findValue=9176371212", success: function(result){
                         $(".result").html(result);
-                        var obj = JSON.parse(result.toString());
+                        var obj = JSON.stringify(result.toString());
                         console.log( obj.title );
                     }});
 
