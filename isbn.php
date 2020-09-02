@@ -22,7 +22,11 @@
                 alert("run");
                 $.ajax({url: "http://asylzat.com/cgi-bin/index.py?findValue=9176371212", success: function(result){
                         $(".response").html(result);
+                        var obj = JSON.parse(result);
+                        console.log( obj.description );
                     }});
+
+
             });
         });
 
