@@ -24,8 +24,8 @@
                         var obj = jQuery.parseJSON( result );
 
 
-                        for (image in obj.images) {
-                            console.log( image.mainUrl );
+                        for (i in obj.images) {
+                            console.log( obj.images[i].mainUrl );
                         }
 
                         $(".content").show();
