@@ -36,7 +36,7 @@ with requests.Session() as c:
     }
 
     headers ={
-        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.0; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0'
     }
 
     page = c.get(url, headers=headers, proxies=proxyDict)
