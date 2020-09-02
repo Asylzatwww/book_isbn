@@ -23,10 +23,15 @@ print(findValue)
 with requests.Session() as c:
     #url = 'http://www.k-agent.ru/search-of-companies'
     url = 'https://www.amazon.co.uk/s?k=' + findValue
-    page = c.get(url)
-    login_data = dict(tbFindValue=findValue, __EVENTTARGET='lbFindTop', next='/')
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36'}
+    #r = requests.get(url, headers=headers)
+    page = c.get(url, headers=headers)
+    #login_data = dict(tbFindValue=findValue, __EVENTTARGET='lbFindTop', next='/')
     #print(page.content)
-    page = c.post(url, data=login_data, headers={"Referer": url})
+    #page = c.post(url, data=login_data, headers={"Referer": url})
+
+    #headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36'}
+    #r = requests.get(url, headers=headers)
 
     #print(page.content)
 
