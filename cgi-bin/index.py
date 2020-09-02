@@ -37,7 +37,7 @@ with requests.Session() as c:
 
     soup = BeautifulSoup(page.content, 'html.parser')
 
-    #print(soup)
+    print(soup)
 
     href= soup.find('body')#.get('href')
 
