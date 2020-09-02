@@ -21,7 +21,7 @@
             $("#button").click(function(){
                 alert("run");
                 $.ajax({url: "http://asylzat.com/cgi-bin/index.py?findValue=9176371212", success: function(result){
-                        $(".response").html(result);
+                        $(".result").html(result);
                         var obj = JSON.parse(result);
                         console.log( obj.description );
                     }});
@@ -36,6 +36,9 @@
 <body>
 
 <div class="response">hello</div>
+<pre class="result">
+
+</pre>
 
 <input type="text" />
 <input type="button" id="button" value="submit" />
