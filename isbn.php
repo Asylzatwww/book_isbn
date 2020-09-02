@@ -56,7 +56,7 @@
         }
 
         .img img {
-            width:200px;
+            width:250px;
         }
 
         pre {
@@ -66,6 +66,10 @@
         .imageBlock {
             float: left;
         }
+
+        .main {
+            margin: 20px;
+        }
     </style>
 </head>
 <body>
@@ -74,26 +78,32 @@
 <pre class="result">
 
 </pre>
-<div class="search">Search</div>
-<input type="text" />
-<input type="button" id="button" value="submit" />
 
-<div class="content">
-    <div class="imageBlock">
-        <div class="img">
+<div class="main">
 
+    <div class="search">Search the book by ISBN in Amazon</div>
+    <input type="text" />
+    <input type="button" id="button" value="Search" />
+
+    <div class="content">
+        <div class="imageBlock">
+            <div class="img">
+
+            </div>
+
+            <div class="imgThumb">
+            </div>
         </div>
 
-        <div class="imgThumb">
+
+        <div class="description">
+            <h3 id="title"></h3>
+            <div id="description"></div>
         </div>
     </div>
-    
 
-    <div class="description">
-        <h3 id="title"></h3>
-        <div id="description"></div>
-    </div>
 </div>
+
 
 </body>
 </html>
