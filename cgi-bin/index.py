@@ -21,12 +21,14 @@ print("Content-type:text/plain;charset=utf-8\r\n\r\n")
 
 with requests.Session() as c:
     url = 'https://www.amazon.co.uk/s?k=' + findValue
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36'}
+    #headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36'}
+
+    headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36'}
     page = c.get(url, headers=headers)
 
     soup = BeautifulSoup(page.content.replace("<!--[if IE 6]>", "").replace("<![endif]-->", ""), 'html.parser')
 
-    print(soup)
+    #print(soup)
 
     href= soup.find("h2").find("a", {"class" : "a-link-normal"}).get('href')
 
