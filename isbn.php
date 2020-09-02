@@ -23,6 +23,12 @@
                         $(".result").html(result);
                         var obj = jQuery.parseJSON( result );
                         console.log( obj.title );
+
+                        $(".content").show();
+
+                        $("#title").html( obj.title );
+                        $("#description").html( obj.description );
+
                     }});
 
 
@@ -31,16 +37,29 @@
 
 
     </script>
+    <style>
+        .content {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 
-<div class="response">hello</div>
+
 <pre class="result">
 
 </pre>
-
+<div class="search">Search</div>
 <input type="text" />
 <input type="button" id="button" value="submit" />
+
+<div class="content">
+    <img src="" />
+    <div class="description">
+        <div id="title"></div>
+        <div id="description"></div>
+    </div>
+</div>
 
 </body>
 </html>
