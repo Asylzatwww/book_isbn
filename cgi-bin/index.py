@@ -39,11 +39,11 @@ with requests.Session() as c:
 
     print(soup)
 
-    href= soup.find('h2')#.get('href')
+    href= soup.find("h2")#.get('href')
 
     print(href)
 
-    dd = soup.find("div", {"class" : "srchbarfrm_v2 "})
+    dd = soup.find("div")
     print(dd)
     print(soup.title.string)
 
