@@ -42,9 +42,8 @@ with requests.Session() as c:
     href= soup.find("a", {"class" : "a-link-normal"})#.get('href')
 
     print(href)
+    print(href.get('href'))
 
-    dd = soup.find("div")
-    print(dd)
     print(soup.title.string)
 
     print("ss")
