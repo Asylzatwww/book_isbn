@@ -35,7 +35,7 @@ with requests.Session() as c:
 
     #print(page.content)
 
-    soup = BeautifulSoup(page, 'html.parser')
+    soup = BeautifulSoup(page.content, 'html.parser')
 
     print(soup)
 
