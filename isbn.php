@@ -15,6 +15,9 @@
 	<link rel="stylesheet" type="text/css" href="print.css" media="print">
 
 	<script>
+
+        alert( $(".response").html() );
+
         $("button").click(function(){
             $.ajax({url: "http://asylzat.com/cgi-bin/index.py?findValue=9176371212", success: function(result){
                     $(".response").html(result);
@@ -24,7 +27,7 @@
 </head>
 <body>
 
-<div class="response"></div>
+<div class="response">hello</div>
 
 <input type="text" />
 
