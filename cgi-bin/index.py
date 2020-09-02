@@ -35,9 +35,11 @@ with requests.Session() as c:
     page = c.get(url, headers=headers)
     soup = BeautifulSoup(page.content.replace("<!--[if IE 6]>", "").replace("<![endif]-->", ""), 'html.parser')
 
-    print(soup.find("span", {"id" : "productTitle"}).get_text())
+    title = soup.find("span", {"id" : "productTitle"}).get_text()
     #print(soup.find("span", {"id" : "productSubtitle"}).get_text())
 
-    print( page.content[ page.content.find("'imageGalleryData' : [") : len(page.content) ][ 0 : page.content[ page.content.find("'imageGalleryData' : [") : len(page.content) ].find("}],")] )
+    images = page.content[ page.content.find("'imageGalleryData' : [") : len(page.content) ][ 0 : page.content[ page.content.find("'imageGalleryData' : [") : len(page.content) ].find("}],")]
 
-    print( page.content[ page.content[ 0 : page.content.find('<div id="outer_postBodyPS"') ].rfind("<noscript>") : page.content.find('<div id="outer_postBodyPS"') ] )
+    description =  page.content[ page.content[ 0 : page.content.find('<div id="outer_postBodyPS"') ].rfind("<noscript>") : page.content.find('<div id="outer_postBodyPS"') ]
+
+    print('{"title":"' + title + '",' + images + '}],"description":"' + description.replace("</noscript>") + '"')
