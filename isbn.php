@@ -26,13 +26,16 @@
                         obj = jQuery.parseJSON( result );
 
                         var img = "";
+                        var imgThumb = "";
 
 
                         for (i in obj.imageGalleryData) {
                              img += "<img src=\"" + obj.imageGalleryData[i].mainUrl + "\" />" ;
+                            imgThumb += "<img src=\"" + obj.imageGalleryData[i].thumbUrl + "\" />" ;
                         }
 
                         $(".img").html(img);
+                        $(".imgThumb").html(imgThumb);
 
                         $(".content").show();
 
@@ -50,6 +53,10 @@
     <style>
         .content {
             display: none;
+        }
+
+        .img img {
+            width:200px;
         }
     </style>
 </head>
@@ -72,7 +79,7 @@
     </div>
 
     <div class="description">
-        <div id="title"></div>
+        <h3 id="title"></h3>
         <div id="description"></div>
     </div>
 </div>
