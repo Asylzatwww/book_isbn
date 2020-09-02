@@ -41,7 +41,7 @@ with requests.Session() as c:
 
     href= soup.find('h2')#.get('href')
 
-    print(href[0])
+    print(href)
     print(href[1])
     print(href[2])
 
