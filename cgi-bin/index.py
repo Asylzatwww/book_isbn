@@ -21,7 +21,8 @@ print(findValue)
 #findValue = '4345265460'
 
 with requests.Session() as c:
-    url = 'http://www.k-agent.ru/search-of-companies'
+    #url = 'http://www.k-agent.ru/search-of-companies'
+    url = 'https://www.amazon.co.uk/s?k=' + findValue
     page = c.get(url)
     login_data = dict(tbFindValue=findValue, __EVENTTARGET='lbFindTop', next='/')
     #print(page.content)
@@ -31,7 +32,9 @@ with requests.Session() as c:
 
     soup = BeautifulSoup(page.content, 'html.parser')
 
-    href= soup.find("a", {"class": "company_link"}).get('href')
+    href= soup.find("a", {"class": "a-link-normal"}).get('href')
+
+    print(href)
 
     dd = soup.find("div", {"class" : "srchbarfrm_v2 "})
     print(dd)
