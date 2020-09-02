@@ -25,10 +25,10 @@ with requests.Session() as c:
 
     #headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36'}
     headers ={
-        ':authority': 'www.amazon.co.uk',
-        ':method': 'GET',
-        ':path': '/Great-Gatsby-Wisehouse-Classics/dp/9176371212/ref=sr_1_1?dchild=1&keywords=9176371212&qid=1598943214&sr=8-1',
-        ':scheme': 'https',
+        'authority': 'www.amazon.co.uk',
+        'method': 'GET',
+        'path': '/Great-Gatsby-Wisehouse-Classics/dp/9176371212/ref=sr_1_1?dchild=1&keywords=9176371212&qid=1598943214&sr=8-1',
+        'scheme': 'https',
         'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
         'accept-encoding': 'gzip, deflate, br',
         'accept-language': 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,bg;q=0.6,ky;q=0.5',
