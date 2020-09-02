@@ -26,6 +26,8 @@ with requests.Session() as c:
 
     soup = BeautifulSoup(page.content.replace("<!--[if IE 6]>", "").replace("<![endif]-->", ""), 'html.parser')
 
+    print(soup)
+
     href= soup.find("h2").find("a", {"class" : "a-link-normal"}).get('href')
 
     #print(href)
