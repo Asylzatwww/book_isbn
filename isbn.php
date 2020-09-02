@@ -12,14 +12,14 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>	
 		<title>Ajouter un livre</title>
 	<link type="text/css" href="styles.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="print.css" media="print">
 
 	<script>
 
         $( document ).ready(function() {
             alert( $(".response").html() );
 
-            $("button").click(function(){
+            $("#button").click(function(){
+                alert("run");
                 $.ajax({url: "http://asylzat.com/cgi-bin/index.py?findValue=9176371212", success: function(result){
                         $(".response").html(result);
                     }});
@@ -34,7 +34,7 @@
 <div class="response">hello</div>
 
 <input type="text" />
-<input type="button" value="submit" />
+<input type="button" id="button" value="submit" />
 
 </body>
 </html>
