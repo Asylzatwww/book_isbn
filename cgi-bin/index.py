@@ -24,6 +24,17 @@ with requests.Session() as c:
     #headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36'}
 
     #headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36'}
+
+    http_proxy  = "http://10.10.1.10:3128"
+    https_proxy = "https://10.10.1.11:1080"
+    ftp_proxy   = "ftp://10.10.1.10:3128"
+
+    proxyDict = {
+        "http"  : http_proxy,
+        "https" : https_proxy,
+        "ftp"   : ftp_proxy
+    }
+
     headers ={
         'authority': 'www.amazon.co.uk',
         'method': 'GET',
@@ -46,7 +57,7 @@ with requests.Session() as c:
         'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36'
     }
 
-    page = c.get(url, headers=headers)
+    page = c.get(url, headers=headers, proxies=proxyDict)
 
     soup = BeautifulSoup(page.content.replace("<!--[if IE 6]>", "").replace("<![endif]-->", ""), 'html.parser')
 
@@ -58,7 +69,7 @@ with requests.Session() as c:
 
     url = 'https://www.amazon.co.uk' + href
     #print(url)
-    page = c.get(url, headers=headers)
+    page = c.get(url, headers=headers, proxies=proxyDict)
     soup = BeautifulSoup(page.content.replace("<!--[if IE 6]>", "").replace("<![endif]-->", ""), 'html.parser')
 
     title = soup.find("span", {"id" : "productTitle"}).get_text()
