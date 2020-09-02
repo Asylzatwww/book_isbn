@@ -49,8 +49,8 @@ with requests.Session() as c:
     soup = BeautifulSoup(page.content.replace("<!--[if IE 6]>", "").replace("<![endif]-->", ""), 'html.parser')
 
     #print(soup.title.string)
-    h1 = soup.find("h1")
-    print(h1)
+    h1 = soup.find("span", {"id" : "productTitle"})
+    print(h1.get_text())
     json = '{'
     i = 0
     for node in soup.find("table", attrs={"class": "compdate"}).find_all("td"):
