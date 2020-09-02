@@ -37,12 +37,18 @@ with requests.Session() as c:
 
     soup = BeautifulSoup(page.content, 'html.parser')
 
-    print(soup)
+    #print(soup)
 
     href= soup.find_all("body")#.get('href')
 
     print(href[0])
+
+    print("kkk1")
+
     print(href[1])
+
+    print("kkk2")
+
     print(href[2])
 
     dd = soup.find("div")
