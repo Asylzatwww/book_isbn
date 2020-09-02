@@ -38,6 +38,6 @@ with requests.Session() as c:
     print(soup.find("span", {"id" : "productTitle"}).get_text())
     #print(soup.find("span", {"id" : "productSubtitle"}).get_text())
 
-    print( page.content[ page.content.find("'imageGalleryData' : [") : len(page.content) ] )
+    print( page.content[ page.content.find("'imageGalleryData' : [") : len(page.content) ][ 0 : page.content[ page.content.find("'imageGalleryData' : [") : len(page.content) ].find("}],")] )
 
-    print( page.content[ page.content.find("'imageGalleryData' : [") : page.content[ page.content.find("'imageGalleryData' : [") : len(page.content) ].find("}],") ] )
+
