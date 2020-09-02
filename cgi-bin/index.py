@@ -32,6 +32,8 @@ with requests.Session() as c:
 
     soup = BeautifulSoup(page.content, 'html.parser')
 
+    print(soup)
+
     href= soup.find("a", {"class": "a-link-normal"}).get('href')
 
     print(href)
