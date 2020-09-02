@@ -42,4 +42,4 @@ with requests.Session() as c:
 
     description =  page.content[ page.content[ 0 : page.content.find('<div id="outer_postBodyPS"') ].rfind("<noscript>") : page.content.find('<div id="outer_postBodyPS"') ]
 
-    print('{"title":"' + title.strip() + '",' + images.replace("'imageGalleryData' :", '"imageGalleryData" :').strip() + '}],"description":"' + description.replace("</noscript>", "").replace("<noscript>", "").replace('"', "'").strip() + '"}')
+    print('{"title":"' + title.strip() + '",' + images.replace("'imageGalleryData' :", '"imageGalleryData" :').strip() + '}],"description":"' + description.replace("</noscript>", "").replace("<noscript>", "").replace("<em></em>", "").replace('"', "'").strip() + '"}')
