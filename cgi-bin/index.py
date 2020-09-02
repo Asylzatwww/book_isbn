@@ -39,17 +39,9 @@ with requests.Session() as c:
 
     #print(soup)
 
-    href= soup.find("a", {"class" : "a-link-normal"}).get('href')
+    href= soup.find("a", {"class" : "a-link-normal"})#.get('href')
 
     print(href)
-
-    print("kkk1")
-
-    print(href[1])
-
-    print("kkk2")
-
-    print(href[2])
 
     dd = soup.find("div")
     print(dd)
