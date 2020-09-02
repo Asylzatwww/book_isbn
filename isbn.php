@@ -58,6 +58,14 @@
         .img img {
             width:200px;
         }
+
+        pre {
+            display: none;
+        }
+        
+        .imageBlock {
+            float: left;
+        }
     </style>
 </head>
 <body>
@@ -71,12 +79,15 @@
 <input type="button" id="button" value="submit" />
 
 <div class="content">
-    <div class="img">
+    <div class="imageBlock">
+        <div class="img">
 
-    </div>
+        </div>
 
-    <div class="imgThumb">
+        <div class="imgThumb">
+        </div>
     </div>
+    
 
     <div class="description">
         <h3 id="title"></h3>
