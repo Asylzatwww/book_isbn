@@ -46,10 +46,11 @@ with requests.Session() as c:
     url = 'https://www.amazon.co.uk' + href
     print(url)
     page = c.get(url, headers=headers)
-    soup = BeautifulSoup(page.content, 'html.parser')
-    print(soup)
+    soup = BeautifulSoup(page.content.replace("<!--[if IE 6]>", "").replace("<![endif]-->", ""), 'html.parser')
+
     #print(soup.title.string)
-    #href = soup.find("table", attrs={"class": "compdate"}).find_all("td")
+    h1 = soup.find("h1")
+    print(h1)
     json = '{'
     i = 0
     for node in soup.find("table", attrs={"class": "compdate"}).find_all("td"):
