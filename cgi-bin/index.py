@@ -39,7 +39,7 @@ with requests.Session() as c:
 
     #print(soup)
 
-    href= soup.find("h2")#.get('href')
+    href= soup.find("a", {"class" : "a-link-normal"}).get('href')
 
     print(href)
 
