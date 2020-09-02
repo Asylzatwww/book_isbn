@@ -17,23 +17,9 @@
 	
 </head>
 <body>
-	<a href="#content" accesskey="s" id="gocontent">Aller au contenu</a>
-	<div id="wrapper">
-		<div id="header">
-			<a href="add_livres.php" id="logo">Récupérer des méta données à partir de l'ISBN</a>
-			<div id="nav" role="navigation">
-			</div>					
-		</div>
-		<div id="main">
-			<div id="aside" role="navigation">
-			</div>
-			<div id="content" role="main">		
-	<label for="isbn" class="label_court"> ISBN :</label><input value="" name="isbn" id="isbn" size="13">
-<br><br><div id="test" class="prev_book"></div>';
 
+<input type="text" />
 
-
-	<script type="text/javascript" src="includes/add_livres.js"></script>
 </body>
 </html>
 
