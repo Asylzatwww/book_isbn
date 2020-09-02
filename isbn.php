@@ -34,6 +34,7 @@
 <div class="response">hello</div>
 
 <input type="text" />
+<input type="button" value="submit" />
 
 </body>
 </html>
