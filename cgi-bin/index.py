@@ -31,12 +31,11 @@ with requests.Session() as c:
     #print(href)
 
     url = 'https://www.amazon.co.uk' + href
-    print(url)
+    #print(url)
     page = c.get(url, headers=headers)
     soup = BeautifulSoup(page.content.replace("<!--[if IE 6]>", "").replace("<![endif]-->", ""), 'html.parser')
 
-    #print(soup.title.string)
     print(soup.find("span", {"id" : "productTitle"}).get_text())
-    print(soup.find("span", {"id" : "productSubtitle"}).get_text())
+    #print(soup.find("span", {"id" : "productSubtitle"}).get_text())
 
-    print( page.content[ page.content.find("'imageGalleryData' : [") : page.content[ page.content.find("'imageGalleryData' : [") : len(page.content) ].page.content.find("}],") ] )
+    print( page.content[ page.content.find("'imageGalleryData' : [") : page.content[ page.content.find("'imageGalleryData' : [") : len(page.content) ].find("}],") ] )
