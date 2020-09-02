@@ -25,10 +25,14 @@
                         $(".result").html(result);
                         obj = jQuery.parseJSON( result );
 
+                        var img = "";
+
 
                         for (i in obj.imageGalleryData) {
-                            console.log( obj.imageGalleryData[i].mainUrl );
+                             img += "<img src=\"" + obj.imageGalleryData[i].mainUrl + "\" />" ;
                         }
+
+                        $(".img").html(img);
 
                         $(".content").show();
 
@@ -60,7 +64,13 @@
 <input type="button" id="button" value="submit" />
 
 <div class="content">
-    <img src="" />
+    <div class="img">
+
+    </div>
+
+    <div class="imgThumb">
+    </div>
+
     <div class="description">
         <div id="title"></div>
         <div id="description"></div>
