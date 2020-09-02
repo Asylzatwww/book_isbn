@@ -65,6 +65,7 @@
         
         .imageBlock {
             float: left;
+            margin-right: 30px;
         }
 
         .main {
@@ -81,7 +82,7 @@
 
 <div class="main">
 
-    <div class="search">Search the book by ISBN in Amazon</div>
+    <h2 class="search">Search the book by ISBN in Amazon</h2>
     <input type="text" />
     <input type="button" id="button" value="Search" />
 
