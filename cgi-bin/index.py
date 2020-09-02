@@ -25,9 +25,9 @@ with requests.Session() as c:
 
     #headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36'}
 
-    http_proxy  = "http://77.111.246.13:3128"
-    https_proxy = "https://77.111.246.13"
-    ftp_proxy   = "ftp://77.111.246.13:3128"
+    http_proxy  = "http://158.181.135.105"
+    https_proxy = "https://158.181.135.105"
+    ftp_proxy   = "ftp://158.181.135.105"
 
     proxyDict = {
         "http"  : http_proxy,
