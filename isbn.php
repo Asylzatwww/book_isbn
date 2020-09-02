@@ -19,13 +19,15 @@
 
             $("#button").click(function(){
 
+                var obj;
+
                 $.ajax({url: "http://asylzat.com/cgi-bin/index.py?findValue=9176371212", success: function(result){
                         $(".result").html(result);
-                        var obj = jQuery.parseJSON( result );
+                        obj = jQuery.parseJSON( result );
 
 
-                        for (i in obj.images) {
-                            console.log( obj.images[i].mainUrl );
+                        for (i in obj.imageGalleryData) {
+                            console.log( obj.imageGalleryData[i].mainUrl );
                         }
 
                         $(".content").show();
